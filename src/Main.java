@@ -22,7 +22,7 @@ public class Main extends Application {
     public void start(Stage theStage) {
         theStage.setTitle("Race!");
 
-        Image image = new Image("file:images/road.png");
+        Image image = new Image("file:./images/road.png");
         ImageView mv = new ImageView(image);
         Group root = new Group();
         root.getChildren().addAll(mv);
@@ -35,7 +35,7 @@ public class Main extends Application {
         root.getChildren().add(canvas);
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        Image road = new Image("file:images/road.png");
+        Image road = new Image("file:./images/road.png");
 
 
         ArrayList<String> input = new ArrayList<String>();
@@ -66,18 +66,18 @@ public class Main extends Application {
 
 
         Car background=new Car();
-        background.setImage("file:images/road.png");
+        background.setImage("file:./images/road.png");
         background.setBackground(0);
 
 
         Car background2=new Car();
-        background2.setImage("file:images/road.png");
+        background2.setImage("file:./images/road.png");
         background2.setBackground(-960);
 
 
 
         Car racer = new Car();
-        racer.setImage("file:images/red.png");
+        racer.setImage("file:./images/red.png");
 
         racer.setPosition(500, 800);
 
@@ -86,7 +86,7 @@ public class Main extends Application {
 
         for (int i = 0; i < 6; i++) {
             Car other = new Car();
-            other.setImage("file:images/yellow.png");
+            other.setImage("file:./images/yellow.png");
             other.spawnCar();
             otherCars.add(other);
 
